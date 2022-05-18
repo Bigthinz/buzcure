@@ -3,7 +3,7 @@ import Image from 'next/image'
 // import Navbar from "../../Components/Button/Nabar/Navbar"
 import Link from "next/link"
 import { HeroImg,HeroHead, HeroTitle,Curve } from "./Hero.styled"
-import Button from "./../components/Button/Button";
+import Button from "./../../components/Button/Button";
 
 const Hero = () => {
   return (

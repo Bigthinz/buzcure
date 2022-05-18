@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { FooterStyled, Links, Subscribe, Wrap } from './Footer.styled'
-import Button from '../Button/Button'
+import Button from './../Button/Button'
 
 const Footer = () => {
   return (
