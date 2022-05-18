@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { FaBeer } from 'react-icons/fa';
 
 import { Service,Grid,ServiceOption, List, Masonry, Mission, Modal, Banner, Product, Header, GridBand, Program, Checkout, Dropbox } from './Layer.styled'
-import Title from './../../components/Title/Title';
-import Button from './../../Components/Button/Button';
+import Title from './../components/Title/Title';
+import Button from './../Components/Button/Button';
 import Link from 'next/link';
 
 const Layer = () => {
