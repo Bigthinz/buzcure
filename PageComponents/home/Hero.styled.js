@@ -26,14 +26,15 @@ background-position:bottom;
     grid-template-columns:1fr;
 
     h1{
-                line-height:1.4;
+        font-size:3.5rem;
+        line-height:1.4;
              span{
                     color: #FFB300;
                     font-weight:700;
                 }
             }
             p{
-               
+               font-size:1.6rem;
                 line-height:1.5;
                 opacity:0.9;
             }
