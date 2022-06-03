@@ -11,15 +11,12 @@ const Hero = () => {
         <div className="wrap">
             <HeroHead>
                 <HeroTitle>
-                    <h1>Helping your business thrive in the digital economy</h1>
-                    <p>We create digital experiences that help your organization work smarter, faster, and better.</p>
+                    <h1><span>Buzcure </span>Helping your business thrive in the digital economy</h1>
+                    <p>We create digital experiences that help your organization work smarter, faster, and better. We provide solutions to complex business challenges using a systematic approach to problem solving and state of the art technologies.</p>
                     <Button text='Sign up now' bg='#54BB6A' color='#fefefe' />
                 </HeroTitle>
             </HeroHead>
-            <HeroImg>
-              
-                <Image src="/images/hero-img-bg.png" alt='hero img' width={700} height='700' layout='intrinsic' objectFit="contain" />
-            </HeroImg>
+           
         </div>
        
 

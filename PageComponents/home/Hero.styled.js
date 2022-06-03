@@ -10,34 +10,61 @@ overflow:hidden;
 
 position:relative;
 
-/* background-image: linear-gradient(90.77deg, #274445 -1.25%, #318375 99.5%); */
-background:url('/images/bac.png');
+background-image: linear-gradient(90.77deg, #274445 -1.25%, #318375 99.5%);
+/* background:url('/images/hero-big.jpg'); */
 background-repeat:no-repeat;
 background-size:cover;
 background-position:bottom;
 
 .wrap{
     position:relative;
-    width:90%;
+    /* width:90%; */
     height:100%;
     margin:auto;
 
     display:grid;
+    grid-template-columns:1fr;
+
+    h1{
+                line-height:1.4;
+             span{
+                    color: #FFB300;
+                    font-weight:700;
+                }
+            }
+            p{
+               
+                line-height:1.5;
+                opacity:0.9;
+            }
 
    
 }
 
 @media only screen and (min-width: 600px) { 
+    height:110vh;
 
-    background:url('/images/big-bg.jpg');
+    background:url('/images/hero-big.jpg');
     background-size:cover;
+    background-position:bottom center;
+    background-repeat:no-repeat;
        
 
        .wrap{
-            grid-template-columns:repeat(2,1fr);
+            grid-template-columns:2fr 1.6fr;
 
             h1{
-                font-size: 3rem;
+                font-size: 4rem;
+                
+                span{
+                    color: #FFB300;
+                    font-weight:700;
+                }
+            }
+            p{
+                font-size:1.6rem;
+                line-height:1.5;
+                opacity:0.9;
             }
        }
        
@@ -54,7 +81,8 @@ background-position:bottom;
      
 
         h1{
-            font-size: 4rem;
+            font-size: 4.5rem;
+            line-height:1.4;
         }
    }
    
@@ -81,7 +109,7 @@ export const HeroTitle = styled.div`
         font-size:3rem;
         font-weight:500;
         
-        margin-bottom:5rem;
+        margin-bottom:3rem;
     }
 
     button{
