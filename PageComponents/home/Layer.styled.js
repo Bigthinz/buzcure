@@ -36,14 +36,18 @@ export const Grid = styled.div`
     grid-gap:2rem;
 
     margin:auto;
+    margin-bottom:5rem;
     
 
     .active{
-        background: #2C635D;
-        color:#fefefe;
-        box-shadow: 5px 15px 25px 10px rgba(39, 68, 69, 0.1);
-
+        background: #274445;
+        color:#fff;
+        box-shadow: 5px 5px 5px  rgba(39, 68, 69, 0.05);
+        font-size: 2rem;
         
+        span{
+            font-weight:500;
+        }
         
     }
 
@@ -53,13 +57,18 @@ export const Grid = styled.div`
     .grid-item{
         padding:2rem 2rem;
         border-radius:.7rem;
+        border: 1px solid #f1f1f1;
+        height:15rem;
+        /* background:#f8f8f8; */
         /* box-shadow: 5px 15px 25px 10px rgba(39, 68, 69, 0.1); */
-        transition: all .1s ease-in-out;
+        transition: .1s ease-in-out;
 
         &:hover{
-        /* background: #2C635D; */
-        /* color:#fefefe; */
-        box-shadow: 5px 15px 25px 10px rgba(39, 68, 69, 0.1);
+        transition: .3s transform ease-in-out;
+        background: #2E7168;
+        transform: scale(1.05);
+        color:#fefefe;
+        box-shadow:  0 20px 25px -5px rgba(0,0,0,.05), 0 10px 10px -5px rgba(0,0,0,.01);
 
     }
 
@@ -84,7 +93,100 @@ export const Grid = styled.div`
 
      @media only screen and (min-width: 1024px) {
         /* grid-template-columns:repeat(4,15rem); */
-        width:60%;
+        width:85%;
+        grid-gap:2.5rem;
+        
+     }
+
+
+`
+
+
+
+
+export const Grid2 = styled.div`
+
+    display:grid;
+    /* grid-template-columns:repeat(2,1fr); */
+    /* grid-template-rows:repeat(2,1fr); */
+    grid-gap:2rem;
+
+    margin:auto;
+    margin-bottom:5rem;
+    margin-top:5rem;
+    
+  
+    .active{
+        background: #f6f6f6;
+        color:#fff;
+        box-shadow: 5px 5px 5px  rgba(39, 68, 69, 0.05);
+        font-size: 2rem;
+        
+        span{
+            font-weight:500;
+        }
+        
+    }
+
+    
+
+
+    .grid-item{
+        padding:2rem 2rem;
+        border-radius:.7rem;
+        /* border: 1px solid #f1f1f1; */
+        display:flex;
+        /* height:15rem; */
+        /* background:#f8f8f8; */
+        /* box-shadow: 5px 15px 25px 10px rgba(39, 68, 69, 0.1); */
+        transition: .1s ease-in-out;
+
+        align-items:center;
+
+        .grid-img{
+            margin-right:1rem;
+            box-shadow:  0 20px 25px -5px rgba(0,0,0,.05), 0 10px 10px -5px rgba(0,0,0,.01);
+            padding:1rem 2rem;
+            border-radius:.5rem;
+            background:#FFB8B8;
+
+            
+        }
+
+        &:hover{
+        transition: .3s transform ease-in-out;
+        /* background: #2E7168; */
+        transform: scale(1.05);
+        /* color:#fefefe; */
+        box-shadow:  0 20px 25px -5px rgba(0,0,0,.05), 0 10px 10px -5px rgba(0,0,0,.01);
+
+            
+        
+    }
+
+        p{
+            margin-top:1rem;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        justify-content:space-between;
+        grid-template-columns:repeat(3,1fr);
+        /* width:70%; */
+        
+     }
+
+     @media only screen and (min-width: 900px) {
+        /* grid-template-columns:repeat(4,15rem); */
+        /* width:60%; */
+
+        
+        
+     }
+
+     @media only screen and (min-width: 1024px) {
+        /* grid-template-columns:repeat(4,15rem); */
+        width:85%;
         grid-gap:2.5rem;
         
      }
@@ -93,9 +195,11 @@ export const Grid = styled.div`
 `
 
 export const ServiceOption = styled.section`
-     width:80%;
+     width:85%;
     /* text-align:center; */
     margin:10rem auto;
+   
+
 
     .wrap{
         display:grid;
@@ -116,7 +220,7 @@ export const ServiceOption = styled.section`
 
 
     @media only screen and (min-width: 600px) {
-
+       
         .wrap{
             grid-template-columns:repeat(2,1fr);
             align-items: center;
@@ -177,47 +281,137 @@ text-align:center;
 
 
 export const Masonry = styled.div`
+    grid-template-columns:1fr;
+    display:none;
 
-/* grid-column:1/2; */
+
+    
+    @media only screen and (min-width: 600px) {
+        display:block;
+
+    }
+
+
 `
 
 export const Mission = styled.section`
  
-  padding:5rem 0;
+  padding:5rem 0 0 0;
   background:#F3F8FE;
-  text-align:center;
+
 
   .wrap{
       width:90%;
       margin: 7rem auto;
+      display:grid;
+
+     
+  }
+
+  .modal-wrap{
+    cursor:none;
+  }
+
+  .title{
+    text-align:center;
+    margin-bottom:3rem;
+    
+
+    .big-num{
+        display:none;
+        
+    }
   }
 
   .img-container{
       margin: 6rem 0;
+      display:none;
   }
+
+
+  @media only screen and (min-width: 600px) {
+    .wrap{
+        grid-template-columns:repeat(2,1fr);
+        grid-column-gap:12rem;
+    
+        /* grid-template-rows:1fr; */
+
+        .title{
+            grid-column:2 / 3;
+            grid-row:1/2;
+            /* width:0%; */
+            padding: 0 4rem;
+            text-align:left;
+
+            .big-num{
+            display:block;
+            font-size:27rem;
+            font-weight:700;
+            color:#01C2A9;
+            margin:0;
+            padding:0;
+    }
+        }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .wrap{
+        width:80%;
+
+    }
+     }
 `
 
 export const Modal = styled.div`
  display:flex;
  flex-direction:column;
- align-items:center;
 
- padding: 3rem 0rem;
+
+ padding: 2rem 2rem ;
+
+
  /* border-radius:.7rem; */
- /* box-shadow:0px 9.25117px 18.5023px 9.25117px #F6F6F6; */
+ box-shadow:  0 20px 25px -5px rgba(0,0,0,.05), 0 10px 10px -5px rgba(0,0,0,.01);
+
+ border-radius:10px;
+ display:grid;
+grid-template-columns: 6rem 1fr;
+grid-column-gap:1rem;
+align-content:center;
+margin-bottom:2rem;
+transition: all .2s ease-in-out;
+
+
+
+&.active{
+    background:#01C2A9;
+    transform:translateY(-5px);
+}
+
+&:hover{
+    box-shadow:0px 6px 10px rgba(201, 230, 179);
+    background:rgba(201, 230, 179,.6);
+    transform:translateY(-5px);
+   
+}
+
+
 
 .modal-img{
-    background:#E5F9F4;
-    border-radius:50%;
-    padding:.7rem !important;
-    margin-bottom:2rem;
+    align-self:center;
+    background:#fefefe;
+    border-radius:50px;
+    /* line-height:4rem; */
+    padding:.4rem !important;
+    /* margin-bottom:2rem; */
     box-shadow:0px 9px 17px 0px rgba(21, 34, 58, .13) ;
 
 }
 
  .modal-text{
      margin-left:1.5rem;
-     text-align:center;
+   
      
      h4{
          margin-bottom:1rem;
@@ -226,6 +420,14 @@ export const Modal = styled.div`
 
      
  }
+
+ @media only screen and (min-width: 600px) {
+    .modal-wrap{
+        grid-column:1/2;
+        grid-row:1/2;
+    }
+ }
+
 `
 
 

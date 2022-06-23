@@ -3,36 +3,84 @@ import Image from 'next/image'
 
 import { FaBeer } from 'react-icons/fa';
 
-import { Service,Grid,ServiceOption, List, Masonry, Mission, Modal, Banner, Product, Header, GridBand, Program, Checkout, Dropbox } from './Layer.styled'
+import { Service,Grid,ServiceOption, List, Masonry, Mission, Modal, Banner, Product, Header, GridBand, Program, Checkout, Dropbox, Grid2 } from './Layer.styled'
 import Title from './../../components/Title/Title';
 import Button from './../../components/Button/Button';
 import Link from 'next/link';
 
 const Layer = () => {
+
+  const grid = [
+    {
+      title:'Paid Search',
+      image:'/icons/warehouse.ico'
+    },
+    {
+      title:'Shopping & Feed Management',
+      image:'/icons/warehouse.ico'
+    },
+    {
+      title:'Paid Social',
+      image:'/icons/warehouse.ico'
+    },
+    {
+      title:'Performance Display',
+      image:'/icons/warehouse.ico'
+    },
+    {
+      title:'Amazon Advertising',
+      image:'/icons/warehouse.ico'
+    },
+    {
+      title:'Remarketing',
+      image:'/icons/warehouse.ico'
+    },
+  ]
+
   return (
     <>
         <div>
             <Service >
                 <h3>Service</h3>
-                <Title text='We Provide Best Services'/>
+                <Title text='Save Time Managing your business with our service'/>
 
                 <Grid>
                     <div className='grid-item'>
                       <Image src='/icons/laptop_metrics.ico' alt='point of sales' width={40} height={40} />
                       
-                      <p>Point of sales</p>
+                      <p>Content<br/>Creation</p>
                     </div>
                     <div className='grid-item'>
                     <Image src='/icons/warehouse.ico' alt='point of sales' width={40} height={40} />
-                      <p>Inventory</p>
+                      <p>Web & Mobile <br/>Development</p>
                     </div>
-                    <div className='grid-item active' >
+                    <div className='grid-item ' >
                     <Image src='/icons/department.ico' alt='point of sales' width={40} height={40} />
-                      <p>Finance</p>
+                      <p>Customer <br/>Support</p>
                     </div>
                     <div className='grid-item'>
                     <Image src='/icons/container_truck.ico' alt='point of sales' width={40} height={40} />
-                      <p>Logistics</p>
+                      <p>Human <br/>Resources</p>
+                    </div>
+
+                </Grid>
+                <Grid>
+                    <div className='grid-item'>
+                      <Image src='/icons/laptop_metrics.ico' alt='point of sales' width={40} height={40} />
+                      
+                      <p>Marketing & <br/>Communication</p>
+                    </div>
+                    <div className='grid-item'>
+                    <Image src='/icons/warehouse.ico' alt='point of sales' width={40} height={40} />
+                      <p>Business <br/>Development</p>
+                    </div>
+                    <div className='grid-item' >
+                    <Image src='/icons/department.ico' alt='point of sales' width={40} height={40} />
+                      <p>Accounting & <br/>Finance</p>
+                    </div>
+                    <div className='grid-item active'>
+                    {/* <Image src='/icons/container_truck.ico' alt='point of sales' width={40} height={40} /> */}
+                      <p>+4 <br/><span>More</span></p>
                     </div>
 
                 </Grid>
@@ -63,13 +111,13 @@ const Layer = () => {
                     <p>Distribution and logistics</p>
                   </li>
                 </ul>
-                <div className='btn'><Button  text='Sign up now' bg='#54BB6A' color='#fefefe' /></div>
+                <div className='btn'><Button  text='Get Started' bg='#54BB6A' color='#fefefe' /></div>
               </List>
              
 
               <Masonry>
                 <div>
-                  <Image src='/images/people.png' alt='image' width={300} height={300} layout='intrinsic' objectFit="contain" />
+                  <Image src='/images/lady-sitting.jpg' alt='image' width={500} height={500} layout='intrinsic' objectFit="contain" />
                 </div>            
             </Masonry>
             </div>
@@ -78,10 +126,14 @@ const Layer = () => {
             <Mission>
               <div className='wrap'>
 
-             <Title className='title' text='Our mission is to change your company'/>
-             
+             <div className='title'>
+              <Title  text='Our mission is to change your company'/>
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              <p className='big-num'>01</p>
+              </div>
+
              <div className='modal-wrap'>
-             <Modal>
+             <Modal className=' active'>
                 <div className='modal-img'>
                   <Image src='/icons/mark.svg' alt='alt' width={50} height={50}/> 
                 </div>  
@@ -111,37 +163,34 @@ const Layer = () => {
              </div>
 
             <div className='img-container'>
-              <Image src='/images/board-photo.png' alt='board photo' width={300} height={300}/>
+              <Image src='/images/cate.png' alt='board photo' width={300} height={300} layout='intrinsic' objectFit="cover" />
             </div>
               </div>
             </Mission>
 
 
             <ServiceOption>
-              <Title className='title' text='We take the work off your hands.'/>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-              <List>
-                <ul>
-                  <li>
-                    <Image src='/icons/mark.svg' alt='mark' width={20} height={20} />
-                    <p>Ecommerce</p>
-                  </li>
-                  <li>
-                    <Image src='/icons/mark.svg' alt='mark' width={20} height={20} />
-                    <p>Point of sale</p>
-                  </li>
-                  <li>
-                    <Image src='/icons/mark.svg' alt='mark' width={20} height={20} />
-                    <p>Fintech</p>
-                  </li>
-                  <li>
-                    <Image src='/icons/mark.svg' alt='mark' width={20} height={20} />
-                    <p>Distribution and logistics</p>
-                  </li>
-                </ul>
-              </List>
-              <div className='btn'><Button  text='Sign up now' bg='#54BB6A' color='#fefefe' /></div>
+              {/* <Title className='title' text='We take the work off your hands.'/> */}
+              <Title className='title' text='              You run your business, we help you find customers.'/>
+              
+              <p>We drive a ton of conversions through these paid media program components.</p>
+              
+              <Grid2>
+                {
+                grid.map((item) => {
+                    return (
+                      <div className='grid-item' key={item.title}>
+                        <div className='grid-img'>
+                        <Image src={item.image} alt='point of sales' width={40} height={40} />
+                        </div>
+                        <p>{item.title}</p>
+                      </div>
+                    )
+                })
+                }
 
+                </Grid2>
+                
               <Masonry>
                 <div></div>            
             </Masonry>

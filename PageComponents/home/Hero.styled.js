@@ -11,7 +11,7 @@ overflow:hidden;
 position:relative;
 
 background-image: linear-gradient(90.77deg, #274445 -1.25%, #318375 99.5%);
-/* background:url('/images/hero-big.jpg'); */
+/* background:url('/images/hero.jpg'); */
 background-repeat:no-repeat;
 background-size:cover;
 background-position:bottom;
@@ -45,9 +45,9 @@ background-position:bottom;
 @media only screen and (min-width: 600px) { 
     height:110vh;
 
-    background:url('/images/hero-big.jpg');
+    background-image:url('/images/hero.jpg');
     background-size:cover;
-    background-position:bottom center;
+    background-position:center;
     background-repeat:no-repeat;
        
 
@@ -82,7 +82,7 @@ background-position:bottom;
      
 
         h1{
-            font-size: 4.5rem;
+            font-size: 3.5rem;
             line-height:1.4;
         }
    }
@@ -100,7 +100,7 @@ background-position:bottom;
 export const HeroTitle = styled.div`
     /* width:80%; */
     text-align:center;
-    color:#fefefe;
+    color:#333;
     
   
    
@@ -146,7 +146,7 @@ export const HeroHead = styled.div`
 left:50%;
 transform:translate(-50%,-50%); */
 
-width:80% !important;
+width:70% !important;
 margin:auto;
 z-index:1;
 /* display:grid; */
